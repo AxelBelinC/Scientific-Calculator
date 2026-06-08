@@ -72,6 +72,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Engine\AngleMode.cs" />
+    <Compile Include="Engine\HistoryEntry.cs" />
+    <Compile Include="Engine\ExpressionParser.cs" />
+    <Compile Include="Engine\CalculatorEngine.cs" />
+    <Compile Include="Theme\ColorPalette.cs" />
+    <Compile Include="Theme\FontSets.cs" />
+    <Compile Include="UI\CalcButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\HistoryPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Grapher\FunctionEntry.cs" />
+    <Compile Include="Grapher\FunctionParser.cs" />
+    <Compile Include="Grapher\GraphRenderer.cs" />
+    <Compile Include="Grapher\FormGrapher.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
