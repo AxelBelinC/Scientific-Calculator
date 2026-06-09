@@ -1,0 +1,38 @@
+<!-- @dsCard group="Colors" viewport="700x120" name="Surface Colors" subtitle="Background and surface hierarchy" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; font-family: var(--font-sans); padding: 16px; }
+  .row { display: flex; gap: 8px; }
+  .swatch { flex: 1; height: 56px; border-radius: 2px; display: flex; flex-direction: column; justify-content: flex-end; padding: 6px 8px; }
+  .name { font-size: 10px; color: var(--color-text-secondary); font-weight: 400; }
+  .hex  { font-size: 11px; color: var(--color-text-primary); font-weight: 600; margin-top: 1px; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="swatch" style="background:var(--color-bg)">
+    <span class="name">--color-bg</span><span class="hex">#1c1c1c</span>
+  </div>
+  <div class="swatch" style="background:var(--color-display-bg); border:1px solid #2a2a2a">
+    <span class="name">--color-display-bg</span><span class="hex">#141414</span>
+  </div>
+  <div class="swatch" style="background:var(--color-history-bg)">
+    <span class="name">--color-history-bg</span><span class="hex">#181818</span>
+  </div>
+  <div class="swatch" style="background:var(--color-history-item)">
+    <span class="name">--color-history-item</span><span class="hex">#242424</span>
+  </div>
+  <div class="swatch" style="background:var(--color-topbar-bg)">
+    <span class="name">--color-topbar-bg</span><span class="hex">#202020</span>
+  </div>
+  <div class="swatch" style="background:var(--color-border)">
+    <span class="name">--color-border</span><span class="hex">#323232</span>
+  </div>
+</div>
+</body>
+</html>

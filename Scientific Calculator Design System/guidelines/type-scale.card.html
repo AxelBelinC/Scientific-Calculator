@@ -1,0 +1,43 @@
+<!-- @dsCard group="Type" viewport="700x210" name="UI Type Scale" subtitle="All sizes used across keys, history, and mode controls" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); font-family: var(--font-sans); padding: 16px 24px; }
+  .row { display: flex; align-items: baseline; gap: 16px; padding: 5px 0; border-bottom: 1px solid #222; }
+  .row:last-child { border-bottom: none; }
+  .sample { color: var(--color-text-primary); min-width: 200px; }
+  .meta   { font-size: 9px; color: #555; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <span class="sample" style="font-size:var(--font-size-btn-lg); font-weight:400">7  8  9  +  −</span>
+    <span class="meta">--font-size-btn-lg · 14px · weight 400 · digit & operator keys</span>
+  </div>
+  <div class="row">
+    <span class="sample" style="font-size:var(--font-size-hist-result); font-weight:400">= 3.14159265</span>
+    <span class="meta">--font-size-hist-result · 13px · weight 400 · history result</span>
+  </div>
+  <div class="row">
+    <span class="sample" style="font-size:var(--font-size-expr); font-weight:400">sin(45) × 2</span>
+    <span class="meta">--font-size-expr · 12px · weight 400 · expression string</span>
+  </div>
+  <div class="row">
+    <span class="sample" style="font-size:var(--font-size-hist-title); font-weight:600">Historial</span>
+    <span class="meta">--font-size-hist-title · 11px · weight 600 · panel headings</span>
+  </div>
+  <div class="row">
+    <span class="sample" style="font-size:var(--font-size-btn-sci); font-weight:400">sin  cos  tan  log  ln  √</span>
+    <span class="meta">--font-size-btn-sci · 10px · weight 400 · scientific fn keys</span>
+  </div>
+  <div class="row">
+    <span class="sample" style="font-size:var(--font-size-btn-xs); font-weight:700">DEG  RAD  Graf  Hist</span>
+    <span class="meta">--font-size-btn-xs · 9px · weight 700 · mode toggle keys</span>
+  </div>
+</body>
+</html>

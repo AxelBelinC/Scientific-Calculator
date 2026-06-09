@@ -1,0 +1,8 @@
+/* ============================================================
+   CalcSci Design System — Root Entry Point
+   Import this single file in any consumer to get all tokens.
+   ============================================================ */
+
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';

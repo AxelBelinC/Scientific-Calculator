@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" viewport="700x100" name="Text & Accent Colors" subtitle="Primary, secondary, accent and error text" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-display-bg); font-family: var(--font-sans); padding: 20px 24px; }
+  .row { display: flex; gap: 40px; align-items: baseline; }
+  .item { display: flex; flex-direction: column; gap: 4px; }
+  .sample { font-size: 22px; font-weight: 300; }
+  .meta { font-size: 9px; color: #555; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="item">
+    <span class="sample" style="color:var(--color-text-primary)">1,024.00</span>
+    <span class="meta">--color-text-primary · #ffffff</span>
+  </div>
+  <div class="item">
+    <span class="sample" style="color:var(--color-text-secondary); font-size:14px">sin(45) =</span>
+    <span class="meta">--color-text-secondary · #a0a0a0</span>
+  </div>
+  <div class="item">
+    <span class="sample" style="color:var(--color-text-accent); font-size:14px">0.7071</span>
+    <span class="meta">--color-text-accent · #00a0ff</span>
+  </div>
+  <div class="item">
+    <span class="sample" style="color:var(--color-text-error); font-size:14px">Entrada inválida</span>
+    <span class="meta">--color-text-error · #ff5050</span>
+  </div>
+</div>
+</body>
+</html>

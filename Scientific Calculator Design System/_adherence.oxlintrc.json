@@ -1,0 +1,347 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "ui_kits/calculator/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:DM Sans|Outfit))/i]",
+        "message": "Font not provided by the design system. Available: DM Sans, Outfit."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CalcButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|role|onClick|disabled|colSpan|rowSpan|size|style|key|ref|className|style|children)$/]",
+        "message": "<CalcButton> doesn't accept that prop. Declared props: label, role, onClick, disabled, colSpan, rowSpan, size, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CalcButton'] > JSXAttribute[name.name='role'] > Literal[value!=/^(?:default|operator|scientific|equals|memory|utility|toggle)$/]",
+        "message": "<CalcButton> role must be one of 'default' | 'operator' | 'scientific' | 'equals' | 'memory' | 'utility' | 'toggle'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CalcButton'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:main|sci|sm|large)$/]",
+        "message": "<CalcButton> size must be one of 'main' | 'sci' | 'sm' | 'large'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Display'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|expression|angleMode|key|ref|className|style|children)$/]",
+        "message": "<Display> doesn't accept that prop. Declared props: value, expression, angleMode."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Display'] > JSXAttribute[name.name='angleMode'] > Literal[value!=/^(?:DEG|RAD)$/]",
+        "message": "<Display> angleMode must be one of 'DEG' | 'RAD'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FunctionChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:expression|color|onRemove|key|ref|className|style|children)$/]",
+        "message": "<FunctionChip> doesn't accept that prop. Declared props: expression, color, onRemove."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='GraphFunction'] > JSXAttribute > JSXIdentifier[name!=/^(?:expression|color|key|ref|className|style|children)$/]",
+        "message": "<GraphFunction> doesn't accept that prop. Declared props: expression, color."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='HistoryItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:expression|result|onClick|key|ref|className|style|children)$/]",
+        "message": "<HistoryItem> doesn't accept that prop. Declared props: expression, result, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='HistoryEntry'] > JSXAttribute > JSXIdentifier[name!=/^(?:expression|result|key|ref|className|style|children)$/]",
+        "message": "<HistoryEntry> doesn't accept that prop. Declared props: expression, result."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "CalcButton": {
+        "replaces": []
+      },
+      "Display": {
+        "replaces": []
+      },
+      "FunctionChip": {
+        "replaces": []
+      },
+      "GraphFunction": {
+        "replaces": []
+      },
+      "HistoryItem": {
+        "replaces": []
+      },
+      "HistoryEntry": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-hover",
+      "--btn-gap",
+      "--calc-display-h",
+      "--calc-expr-row-h",
+      "--calc-memory-h",
+      "--calc-mode-row-h",
+      "--calc-sci-grid-h",
+      "--calc-width",
+      "--calc-window-h",
+      "--calc-window-w",
+      "--color-bg",
+      "--color-border",
+      "--color-border-hover",
+      "--color-btn-default",
+      "--color-btn-default-hover",
+      "--color-btn-equals",
+      "--color-btn-equals-hover",
+      "--color-btn-memory",
+      "--color-btn-memory-hover",
+      "--color-btn-operator",
+      "--color-btn-operator-hover",
+      "--color-btn-press",
+      "--color-btn-scientific",
+      "--color-btn-scientific-hover",
+      "--color-btn-utility",
+      "--color-btn-utility-hover",
+      "--color-display-bg",
+      "--color-graph-1",
+      "--color-graph-2",
+      "--color-graph-3",
+      "--color-graph-4",
+      "--color-graph-5",
+      "--color-graph-6",
+      "--color-history-bg",
+      "--color-history-item",
+      "--color-plot-1",
+      "--color-plot-2",
+      "--color-plot-3",
+      "--color-plot-4",
+      "--color-plot-5",
+      "--color-plot-6",
+      "--color-text-accent",
+      "--color-text-error",
+      "--color-text-primary",
+      "--color-text-secondary",
+      "--color-topbar-bg",
+      "--display-pad-r",
+      "--font-display",
+      "--font-mono",
+      "--font-sans",
+      "--font-size-btn-lg",
+      "--font-size-btn-sci",
+      "--font-size-btn-sm",
+      "--font-size-btn-xs",
+      "--font-size-display",
+      "--font-size-expr",
+      "--font-size-hist-expr",
+      "--font-size-hist-result",
+      "--font-size-hist-title",
+      "--font-ui",
+      "--font-weight-light",
+      "--font-weight-regular",
+      "--font-weight-semibold",
+      "--history-pad",
+      "--leading-loose",
+      "--leading-normal",
+      "--leading-tight",
+      "--radius-chip",
+      "--radius-full",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-none",
+      "--radius-sm",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-none",
+      "--shadow-sm",
+      "--space-0",
+      "--space-1",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-20",
+      "--space-24",
+      "--space-32",
+      "--space-36",
+      "--space-4",
+      "--space-48",
+      "--space-6",
+      "--space-64",
+      "--space-72",
+      "--space-8",
+      "--surface-app",
+      "--surface-card",
+      "--surface-display",
+      "--surface-history",
+      "--text-accent",
+      "--text-body",
+      "--text-btn-main",
+      "--text-btn-sci",
+      "--text-btn-sm",
+      "--text-danger",
+      "--text-display",
+      "--text-expression",
+      "--text-hist-expr",
+      "--text-hist-result",
+      "--text-hist-title",
+      "--text-muted",
+      "--weight-bold",
+      "--weight-light",
+      "--weight-medium",
+      "--weight-regular",
+      "--weight-semibold"
+    ],
+    "tokenKinds": {
+      "--color-bg": "color",
+      "--color-display-bg": "color",
+      "--color-history-bg": "color",
+      "--color-history-item": "color",
+      "--color-topbar-bg": "color",
+      "--color-btn-default": "color",
+      "--color-btn-default-hover": "color",
+      "--color-btn-press": "color",
+      "--color-btn-operator": "color",
+      "--color-btn-operator-hover": "color",
+      "--color-btn-scientific": "color",
+      "--color-btn-scientific-hover": "color",
+      "--color-btn-equals": "color",
+      "--color-btn-equals-hover": "color",
+      "--color-btn-memory": "color",
+      "--color-btn-memory-hover": "color",
+      "--color-btn-utility": "color",
+      "--color-btn-utility-hover": "color",
+      "--color-text-primary": "font",
+      "--color-text-secondary": "font",
+      "--color-text-accent": "font",
+      "--color-text-error": "font",
+      "--color-border": "color",
+      "--color-border-hover": "color",
+      "--color-graph-1": "color",
+      "--color-graph-2": "color",
+      "--color-graph-3": "color",
+      "--color-graph-4": "color",
+      "--color-graph-5": "color",
+      "--color-graph-6": "color",
+      "--color-plot-1": "color",
+      "--color-plot-2": "color",
+      "--color-plot-3": "color",
+      "--color-plot-4": "color",
+      "--color-plot-5": "color",
+      "--color-plot-6": "color",
+      "--surface-app": "color",
+      "--surface-display": "color",
+      "--surface-history": "color",
+      "--surface-card": "color",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-accent": "font",
+      "--text-danger": "font",
+      "--accent": "color",
+      "--accent-hover": "color",
+      "--font-display": "font",
+      "--font-ui": "font",
+      "--font-mono": "font",
+      "--text-display": "font",
+      "--text-expression": "font",
+      "--text-btn-main": "font",
+      "--text-btn-sci": "font",
+      "--text-btn-sm": "font",
+      "--text-hist-expr": "font",
+      "--text-hist-result": "font",
+      "--text-hist-title": "font",
+      "--weight-light": "font",
+      "--weight-regular": "font",
+      "--weight-medium": "font",
+      "--weight-semibold": "font",
+      "--weight-bold": "font",
+      "--leading-tight": "font",
+      "--leading-normal": "font",
+      "--leading-loose": "font",
+      "--font-sans": "font",
+      "--font-size-display": "font",
+      "--font-size-expr": "font",
+      "--font-size-btn-lg": "font",
+      "--font-size-btn-sci": "font",
+      "--font-size-btn-sm": "font",
+      "--font-size-btn-xs": "font",
+      "--font-size-hist-expr": "font",
+      "--font-size-hist-result": "font",
+      "--font-size-hist-title": "font",
+      "--font-weight-light": "font",
+      "--font-weight-regular": "font",
+      "--font-weight-semibold": "font",
+      "--space-0": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-4": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--space-20": "spacing",
+      "--space-24": "spacing",
+      "--space-32": "spacing",
+      "--space-36": "spacing",
+      "--space-48": "spacing",
+      "--space-64": "spacing",
+      "--space-72": "spacing",
+      "--calc-mode-row-h": "spacing",
+      "--calc-expr-row-h": "spacing",
+      "--calc-display-h": "spacing",
+      "--calc-memory-h": "spacing",
+      "--calc-sci-grid-h": "spacing",
+      "--calc-width": "spacing",
+      "--calc-window-w": "spacing",
+      "--calc-window-h": "spacing",
+      "--btn-gap": "spacing",
+      "--display-pad-r": "spacing",
+      "--history-pad": "spacing",
+      "--radius-none": "radius",
+      "--radius-sm": "radius",
+      "--radius-chip": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-full": "radius",
+      "--shadow-none": "shadow",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow"
+    },
+    "fontFamilies": [
+      "DM Sans",
+      "Outfit"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Button Role Colors" subtitle="Default, hover states for every key category" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); font-family: var(--font-sans); padding: 16px; }
+  .row { display: flex; gap: 6px; margin-bottom: 6px; }
+  .pair { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+  .swatch { height: 36px; border-radius: 2px; display: flex; align-items: flex-end; padding: 4px 6px; }
+  .label { font-size: 9px; color: var(--color-text-secondary); }
+  .name { font-size: 9px; color: var(--color-text-secondary); text-align: center; margin-top: 3px; }
+  .dot  { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="pair">
+    <div class="swatch" style="background:var(--color-btn-default)"><span class="label" style="color:#fff">7</span></div>
+    <div class="swatch" style="background:var(--color-btn-default-hover)"><span class="label" style="color:#fff">hover</span></div>
+    <div class="name">Default</div>
+  </div>
+  <div class="pair">
+    <div class="swatch" style="background:var(--color-btn-operator)"><span class="label" style="color:#fff">÷</span></div>
+    <div class="swatch" style="background:var(--color-btn-operator-hover)"><span class="label" style="color:#fff">hover</span></div>
+    <div class="name">Operator</div>
+  </div>
+  <div class="pair">
+    <div class="swatch" style="background:var(--color-btn-scientific)"><span class="label" style="color:#fff">sin</span></div>
+    <div class="swatch" style="background:var(--color-btn-scientific-hover)"><span class="label" style="color:#fff">hover</span></div>
+    <div class="name">Scientific</div>
+  </div>
+  <div class="pair">
+    <div class="swatch" style="background:var(--color-btn-equals)"><span class="label" style="color:#fff">=</span></div>
+    <div class="swatch" style="background:var(--color-btn-equals-hover)"><span class="label" style="color:#fff">hover</span></div>
+    <div class="name">Equals</div>
+  </div>
+  <div class="pair">
+    <div class="swatch" style="background:var(--color-btn-memory)"><span class="label" style="color:#fff">MR</span></div>
+    <div class="swatch" style="background:var(--color-btn-memory-hover)"><span class="label" style="color:#fff">hover</span></div>
+    <div class="name">Memory</div>
+  </div>
+  <div class="pair">
+    <div class="swatch" style="background:var(--color-btn-utility)"><span class="label" style="color:#fff">C</span></div>
+    <div class="swatch" style="background:var(--color-btn-utility-hover)"><span class="label" style="color:#fff">hover</span></div>
+    <div class="name">Utility</div>
+  </div>
+  <div class="pair">
+    <div class="swatch" style="background:var(--color-btn-press)"><span class="label" style="color:#fff">↓</span></div>
+    <div class="swatch" style="background:var(--color-btn-press); opacity:.6"><span class="label" style="color:#777">—</span></div>
+    <div class="name">Press</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!-- @dsCard group="Brand" viewport="700x150" name="Visual Motifs" subtitle="Corner radius, borders, button anatomy, grid pattern" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); font-family: var(--font-sans); padding: 20px 24px; }
+  .row { display: flex; gap: 24px; align-items: flex-start; }
+  .group { display: flex; flex-direction: column; gap: 6px; }
+  .group-title { font-size: 9px; color: #444; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+
+  /* Radius demos */
+  .box { width: 40px; height: 40px; background: var(--color-btn-default); display:flex; align-items:center; justify-content:center; }
+  .r0  { border-radius: 0; }
+  .r2  { border-radius: 2px; }
+  .r4  { border-radius: 4px; }
+
+  /* Button anatomy */
+  .btn-demo { height: 40px; width: 60px; display: flex; align-items:center; justify-content:center; font-size:13px; color:#fff; border: 1px solid transparent; }
+  .btn-normal  { background: var(--color-btn-default); }
+  .btn-hover   { background: var(--color-btn-default-hover); border-color: var(--color-border-hover); }
+  .btn-pressed { background: var(--color-btn-press); }
+
+  /* 1px gap grid -->*/
+  .mini-grid { display: grid; grid-template-columns: repeat(3, 28px); grid-template-rows: repeat(3, 22px); gap: 1px; background: var(--color-bg); }
+  .mini-cell { background: var(--color-btn-default); display:flex;align-items:center;justify-content:center; font-size:9px; color:#fff; }
+
+  .lbl { font-size: 9px; color: #555; text-align:center; margin-top:4px; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="group">
+    <div class="group-title">Corner radius</div>
+    <div style="display:flex;gap:8px;align-items:flex-end">
+      <div><div class="box r0"></div><div class="lbl">0 (keys)</div></div>
+      <div><div class="box r2"></div><div class="lbl">2px (chips)</div></div>
+      <div><div class="box r4"></div><div class="lbl">4px (panels)</div></div>
+    </div>
+  </div>
+  <div class="group" style="margin-left:8px">
+    <div class="group-title">Button states</div>
+    <div style="display:flex;gap:6px;align-items:flex-end">
+      <div><div class="btn-demo btn-normal">7</div><div class="lbl">Default</div></div>
+      <div><div class="btn-demo btn-hover">7</div><div class="lbl">Hover</div></div>
+      <div><div class="btn-demo btn-pressed">7</div><div class="lbl">Press</div></div>
+    </div>
+  </div>
+  <div class="group" style="margin-left:8px">
+    <div class="group-title">Key grid (1px gap)</div>
+    <div class="mini-grid">
+      <div class="mini-cell" style="background:var(--color-btn-utility)">C</div>
+      <div class="mini-cell" style="background:var(--color-btn-utility)">CE</div>
+      <div class="mini-cell" style="background:var(--color-btn-utility)">⌫</div>
+      <div class="mini-cell">7</div><div class="mini-cell">8</div><div class="mini-cell" style="background:var(--color-btn-operator)">÷</div>
+      <div class="mini-cell">4</div><div class="mini-cell">5</div><div class="mini-cell" style="background:var(--color-btn-equals)">=</div>
+    </div>
+  </div>
+  <div class="group" style="margin-left:8px">
+    <div class="group-title">No shadows · flat fills only</div>
+    <div style="font-size:10px; color:#555; max-width:150px; line-height:1.5; margin-top:6px">
+      No drop shadows, no gradients.<br>
+      Color alone encodes role + state.<br>
+      1px translucent border on hover only.
+    </div>
+  </div>
+</div>
+</body>
+</html>

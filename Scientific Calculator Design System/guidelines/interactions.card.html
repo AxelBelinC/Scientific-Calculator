@@ -1,0 +1,62 @@
+<!-- @dsCard group="Brand" viewport="700x130" name="Interactions" subtitle="Hover: bg shift + 1px border · Press: darker bg · No animation delay" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); font-family: var(--font-sans); padding: 20px 24px; }
+  .row { display: flex; gap: 12px; }
+  .group { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+  .title { font-size: 9px; color: #444; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .states { display: flex; gap: 3px; }
+  .key { width: 52px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #fff; border: 1px solid transparent; transition: background 0.05s; }
+  .lbl { font-size: 8px; color: #444; text-align: center; margin-top: 3px; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="group">
+    <div class="title">Default key</div>
+    <div class="states">
+      <div><div class="key" style="background:var(--color-btn-default)">5</div><div class="lbl">rest</div></div>
+      <div><div class="key" style="background:var(--color-btn-default-hover);border-color:var(--color-border-hover)">5</div><div class="lbl">hover</div></div>
+      <div><div class="key" style="background:var(--color-btn-press)">5</div><div class="lbl">press</div></div>
+    </div>
+  </div>
+  <div class="group">
+    <div class="title">Operator key</div>
+    <div class="states">
+      <div><div class="key" style="background:var(--color-btn-operator)">+</div><div class="lbl">rest</div></div>
+      <div><div class="key" style="background:var(--color-btn-operator-hover);border-color:var(--color-border-hover)">+</div><div class="lbl">hover</div></div>
+      <div><div class="key" style="background:var(--color-btn-press)">+</div><div class="lbl">press</div></div>
+    </div>
+  </div>
+  <div class="group">
+    <div class="title">Equals key</div>
+    <div class="states">
+      <div><div class="key" style="background:var(--color-btn-equals)">=</div><div class="lbl">rest</div></div>
+      <div><div class="key" style="background:var(--color-btn-equals-hover);border-color:var(--color-border-hover)">=</div><div class="lbl">hover</div></div>
+      <div><div class="key" style="background:var(--color-btn-press)">=</div><div class="lbl">press</div></div>
+    </div>
+  </div>
+  <div class="group">
+    <div class="title">Memory key</div>
+    <div class="states">
+      <div><div class="key" style="background:var(--color-btn-memory);font-size:10px">MR</div><div class="lbl">rest</div></div>
+      <div><div class="key" style="background:var(--color-btn-memory-hover);border-color:var(--color-border-hover);font-size:10px">MR</div><div class="lbl">hover</div></div>
+      <div><div class="key" style="background:var(--color-btn-press);font-size:10px">MR</div><div class="lbl">press</div></div>
+    </div>
+  </div>
+  <div class="group">
+    <div class="title">Utility key</div>
+    <div class="states">
+      <div><div class="key" style="background:var(--color-btn-utility)">C</div><div class="lbl">rest</div></div>
+      <div><div class="key" style="background:var(--color-btn-utility-hover);border-color:var(--color-border-hover)">C</div><div class="lbl">hover</div></div>
+      <div><div class="key" style="background:var(--color-btn-press)">C</div><div class="lbl">press</div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

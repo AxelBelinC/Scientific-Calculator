@@ -1,0 +1,40 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo" subtitle="Mark, horizontal lockup, and dark/light placements" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); font-family: var(--font-sans); }
+  .row { display: flex; gap: 0; height: 200px; }
+  .cell { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 20px; }
+  .label { font-size: 9px; color: #444; letter-spacing: 0.05em; text-transform: uppercase; }
+  .on-light { background: #f0f0f0; }
+  .on-dark  { background: var(--color-bg); }
+  .on-black { background: #000; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="cell on-dark">
+    <img src="../assets/logo.svg" style="height:48px" alt="Scientific Calculator logo">
+    <span class="label" style="color:#555">On dark</span>
+  </div>
+  <div class="cell on-black">
+    <img src="../assets/logo.svg" style="height:48px" alt="Scientific Calculator logo">
+    <span class="label" style="color:#444">On black</span>
+  </div>
+  <div class="cell on-dark" style="gap:24px; flex-direction: row; justify-content: space-evenly; align-items: center;">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <img src="../assets/logo-mark.svg" style="height:72px" alt="Logo mark">
+      <span class="label" style="color:#555">Mark</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <img src="../assets/grapher-icon.svg" style="height:56px" alt="Grapher icon">
+      <span class="label" style="color:#555">Grapher</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* ============================================================
+   CalcSci — Color Tokens
+   Source: Scientific-Calculator/Theme/ColorPalette.cs
+   ============================================================ */
+
+:root {
+  /* ── Surfaces ───────────────────────────────────────────── */
+  --color-bg:             #1c1c1c;   /* Form background (28,28,28) */
+  --color-display-bg:     #141414;   /* Display + expression area  */
+  --color-history-bg:     #181818;   /* History panel background   */
+  --color-history-item:   #242424;   /* Individual history rows    */
+  --color-topbar-bg:      #202020;   /* Grapher top bar            */
+
+  /* ── Button base fills ──────────────────────────────────── */
+  --color-btn-default:          #323232;
+  --color-btn-default-hover:    #444444;
+  --color-btn-press:            #262626;
+
+  --color-btn-operator:         #2d3749;
+  --color-btn-operator-hover:   #3c4b64;
+
+  --color-btn-scientific:       #263241;
+  --color-btn-scientific-hover: #344458;
+
+  --color-btn-equals:           #0067c0;
+  --color-btn-equals-hover:     #0078d7;
+
+  --color-btn-memory:           #32263c;
+  --color-btn-memory-hover:     #443452;
+
+  --color-btn-utility:          #3e2828;
+  --color-btn-utility-hover:    #553737;
+
+  /* ── Text ───────────────────────────────────────────────── */
+  --color-text-primary:   #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --color-text-accent:    #00a0ff;
+  --color-text-error:     #ff5050;
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --color-border:         #323232;
+  --color-border-hover:   rgba(255, 255, 255, 0.31);
+
+  /* ── Graph function palette ─────────────────────────────── */
+  --color-graph-1: #00a0ff;
+  --color-graph-2: #ff5050;
+  --color-graph-3: #50c850;
+  --color-graph-4: #ffaa00;
+  --color-graph-5: #b450ff;
+  --color-graph-6: #00dcc8;
+
+  /* ── Graph plot aliases (used by guideline cards) ────────── */
+  --color-plot-1: var(--color-graph-1);
+  --color-plot-2: var(--color-graph-2);
+  --color-plot-3: var(--color-graph-3);
+  --color-plot-4: var(--color-graph-4);
+  --color-plot-5: var(--color-graph-5);
+  --color-plot-6: var(--color-graph-6);
+
+  /* ── Semantic aliases ───────────────────────────────────── */
+  --surface-app:      var(--color-bg);
+  --surface-display:  var(--color-display-bg);
+  --surface-history:  var(--color-history-bg);
+  --surface-card:     var(--color-history-item);
+
+  --text-body:        var(--color-text-primary);
+  --text-muted:       var(--color-text-secondary);
+  --text-accent:      var(--color-text-accent);
+  --text-danger:      var(--color-text-error);
+
+  --accent:           var(--color-btn-equals);
+  --accent-hover:     var(--color-btn-equals-hover);
+}

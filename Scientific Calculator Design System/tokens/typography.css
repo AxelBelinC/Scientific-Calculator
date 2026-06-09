@@ -1,0 +1,56 @@
+/* ============================================================
+   CalcSci — Typography Tokens
+   Source: Scientific-Calculator/Theme/FontSets.cs
+
+   ⚠ Font substitution: Original uses Segoe UI (Windows system
+     font, not web-available). Substituted with:
+       Display numbers → "Outfit" Light (Google Fonts)
+       UI / Buttons    → "DM Sans" (Google Fonts)
+     Request the original Segoe UI .ttf files to match exactly.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@300;400;500&display=swap');
+
+:root {
+  /* ── Font families ──────────────────────────────────────── */
+  --font-display: 'Outfit',  'Segoe UI Light', system-ui, sans-serif;
+  --font-ui:      'DM Sans', 'Segoe UI',       system-ui, sans-serif;
+  --font-mono:    'Outfit',  'Segoe UI',        monospace;
+
+  /* ── Font sizes (matches original pt→px at 96dpi) ──────── */
+  --text-display:     36px;   /* Main result — Outfit Light 300 */
+  --text-expression:  12px;   /* Expression row — DM Sans 400   */
+  --text-btn-main:    14px;   /* Number & operator buttons      */
+  --text-btn-sci:     10px;   /* Scientific fn / memory buttons */
+  --text-btn-sm:       9px;   /* Mode toggle / small labels     */
+  --text-hist-expr:   10px;   /* History expression line        */
+  --text-hist-result: 13px;   /* History result line            */
+  --text-hist-title:  11px;   /* "Historial" panel heading      */
+
+  /* ── Weights ────────────────────────────────────────────── */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ── Line heights ───────────────────────────────────────── */
+  --leading-tight:  1.1;
+  --leading-normal: 1.4;
+  --leading-loose:  1.6;
+
+  /* ── Aliases (used by guideline cards) ─────────────────── */
+  --font-sans:             var(--font-ui);
+  --font-size-display:     var(--text-display);
+  --font-size-expr:        var(--text-expression);
+  --font-size-btn-lg:      var(--text-btn-main);
+  --font-size-btn-sci:     var(--text-btn-sci);
+  --font-size-btn-sm:      var(--text-btn-sci);
+  --font-size-btn-xs:      var(--text-btn-sm);
+  --font-size-hist-expr:   var(--text-hist-expr);
+  --font-size-hist-result: var(--text-hist-result);
+  --font-size-hist-title:  var(--text-hist-title);
+  --font-weight-light:     var(--weight-light);
+  --font-weight-regular:   var(--weight-regular);
+  --font-weight-semibold:  var(--weight-semibold);
+}

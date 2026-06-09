@@ -1,0 +1,34 @@
+<!-- @dsCard group="Type" viewport="700x160" name="Display Type" subtitle="Segoe UI Light 36px — main result number" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-display-bg); font-family: var(--font-sans); padding: 20px 24px; }
+  .display-num {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-light);
+    color: var(--color-text-primary);
+    text-align: right;
+    letter-spacing: -0.02em;
+    line-height: var(--leading-tight);
+  }
+  .expr {
+    font-size: var(--font-size-expr);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-secondary);
+    text-align: right;
+    margin-bottom: 6px;
+  }
+  .meta { font-size: 10px; color: #444; margin-top: 12px; }
+</style>
+</head>
+<body>
+  <div class="expr">sin(45) × 2 =</div>
+  <div class="display-num">1,414.213</div>
+  <div class="meta">Segoe UI · weight 300 · 36px · --font-size-display</div>
+</body>
+</html>

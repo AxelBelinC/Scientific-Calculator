@@ -1,0 +1,52 @@
+/* ============================================================
+   CalcSci — Spacing, Radius & Shadow Tokens
+   Source: Scientific-Calculator/Form1.cs layout constants
+   ============================================================ */
+
+:root {
+  /* ── Base scale (4 px unit) ─────────────────────────────── */
+  --space-0:   0px;
+  --space-1:   1px;
+  --space-2:   2px;
+  --space-4:   4px;
+  --space-6:   6px;
+  --space-8:   8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-36: 36px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-72: 72px;
+
+  /* ── Calculator layout rows (from Form1.cs RowStyles) ───── */
+  --calc-mode-row-h:   28px;
+  --calc-expr-row-h:   28px;
+  --calc-display-h:    72px;
+  --calc-memory-h:     36px;
+  --calc-sci-grid-h:  160px;
+  --calc-width:       400px;
+  --calc-window-w:    730px;
+  --calc-window-h:    650px;
+
+  /* ── Button gaps ─────────────────────────────────────────── */
+  --btn-gap:          1px;   /* Gap between all calculator buttons */
+  --display-pad-r:   10px;   /* Right padding inside display       */
+  --history-pad:      6px 4px;
+
+  /* ── Border radius ──────────────────────────────────────── */
+  --radius-none: 0px;   /* All calculator buttons — perfectly square */
+  --radius-sm:   2px;   /* Input fields, small chips */
+  --radius-chip: 2px;   /* FunctionChip alias */
+  --radius-md:   4px;   /* Panels, tooltips */
+  --radius-lg:   8px;   /* Window chrome, dialogs */
+  --radius-full: 9999px;
+
+  /* ── Shadows (app uses flat/no shadows natively) ────────── */
+  --shadow-none: none;
+  --shadow-sm:   0 1px 4px rgba(0, 0, 0, 0.5);
+  --shadow-md:   0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.7);
+}

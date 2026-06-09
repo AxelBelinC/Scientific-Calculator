@@ -1,0 +1,41 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Spacing Tokens" subtitle="Base scale and component-specific spacing values" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); font-family: var(--font-sans); padding: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; margin-bottom: 14px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .bar  { background: var(--color-btn-operator); border-radius: 1px; width: 100%; }
+  .lbl  { font-size: 9px; color: var(--color-text-secondary); text-align: center; }
+  .val  { font-size: 8px; color: #555; text-align: center; }
+  .divider { border: none; border-top: 1px solid #222; margin: 0 0 10px; }
+  .comp-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .comp-item { display: flex; align-items: center; gap: 6px; }
+  .comp-bar { background: var(--color-btn-scientific); height: 10px; border-radius: 1px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item"><div class="bar" style="height:1px"></div><span class="lbl">--space-1</span><span class="val">1px</span></div>
+    <div class="item"><div class="bar" style="height:2px"></div><span class="lbl">--space-2</span><span class="val">2px</span></div>
+    <div class="item"><div class="bar" style="height:4px"></div><span class="lbl">--space-4</span><span class="val">4px</span></div>
+    <div class="item"><div class="bar" style="height:6px"></div><span class="lbl">--space-6</span><span class="val">6px</span></div>
+    <div class="item"><div class="bar" style="height:8px"></div><span class="lbl">--space-8</span><span class="val">8px</span></div>
+    <div class="item"><div class="bar" style="height:10px"></div><span class="lbl">--space-10</span><span class="val">10px</span></div>
+    <div class="item"><div class="bar" style="height:12px"></div><span class="lbl">--space-12</span><span class="val">12px</span></div>
+    <div class="item"><div class="bar" style="height:16px"></div><span class="lbl">--space-16</span><span class="val">16px</span></div>
+  </div>
+  <hr class="divider">
+  <div class="comp-row">
+    <div class="comp-item"><div class="comp-bar" style="width:var(--btn-gap)"></div><span class="lbl" style="font-size:9px;color:#555">btn-gap 1px</span></div>
+    <div class="comp-item"><div class="comp-bar" style="width:44px"></div><span class="lbl" style="font-size:9px;color:#555">btn-height-lg 44px</span></div>
+    <div class="comp-item"><div class="comp-bar" style="width:36px"></div><span class="lbl" style="font-size:9px;color:#555">btn-height-md 36px</span></div>
+    <div class="comp-item"><div class="comp-bar" style="width:30px"></div><span class="lbl" style="font-size:9px;color:#555">btn-height-sm 30px</span></div>
+    <div class="comp-item"><div class="comp-bar" style="width:72px"></div><span class="lbl" style="font-size:9px;color:#555">display-height 72px</span></div>
+  </div>
+</body>
+</html>
